@@ -1,5 +1,5 @@
-/* Responsive for mobile */
-@media (max-width: 600px) {
+/* ========== HOME SECTION ========== */
+@media (max-width: 900px) {
     .home-section {
         padding: 18px 8px;
         max-width: 98vw;
@@ -10,5 +10,113 @@
     .spacex-whatis h2,
     .spacex-history h2 {
         font-size: 1.3rem;
+    }
+    .spacex-whatis p,
+    .spacex-history p {
+        font-size: 1rem;
+    }
+}
+
+/* ========== NAVBAR ========== */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 16px 8px;
+    }
+    .navbar-logo {
+        margin-bottom: 12px;
+    }
+    .navbar-links {
+        gap: 16px;
+    }
+}
+
+/* ========== LAUNCHES SECTION ========== */
+@media (max-width: 900px) {
+    .launches-section {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+    .launch-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .launch-item img {
+        width: 98vw;
+        max-width: 98vw;
+        margin-left: 0;
+        margin-bottom: 18px;
+    }
+    .launch-item-content {
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/* ========== FLEET SECTION ========== */
+@media (max-width: 900px) {
+    .fleet-list {
+        gap: 24px;
+    }
+    .fleet-item {
+        flex-direction: column;
+        align-items: center;
+        max-width: 98vw;
+        gap: 18px;
+    }
+    .fleet-item img {
+        width: 98vw;
+        max-width: 98vw;
+        margin-bottom: 18px;
+    }
+    .fleet-item-content {
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/* ========== FOOTER ========== */
+@media (max-width: 900px) {
+    .footer {
+        padding: 24px 0 12px 0;
+        font-size: 0.95rem;
+    }
+    .footer .footer-links {
+        gap: 12px;
+        flex-direction: column;
+        margin: 8px 0 0 0;
+    }
+}
+
+/* ========== GENERAL SMALL DEVICES ========== */
+@media (max-width: 600px) {
+    h1, h2, h3 {
+        font-size: 1.2rem !important;
+    }
+    .home-section,
+    .launches-section,
+    .fleet-section {
+        padding: 10px 2px;
+        max-width: 100vw;
+        margin: 12px 0 0 0;
+    }
+    .spacex-welcome h1 {
+        font-size: 1.3rem;
+    }
+    .fleet-item img,
+    .launch-item img {
+        width: 90vw;
+        max-width: 90vw;
+    }
+    .fleet-item,
+    .launch-item {
+        padding: 12px 4px;
+        gap: 10px;
+    }
+    .footer {
+        padding: 16px 0 8px 0;
+        font-size: 0.9rem;
     }
 }

@@ -1,3 +1,4 @@
+/* ========== RESET & BASE ========== */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     color: #fff;
 }
 
+/* ========== NAVBAR ========== */
 .navbar {
     display: flex;
     align-items: center;
@@ -49,7 +51,7 @@ body {
     color: #00aaff;
 }
 
-/* HOME SECTION */
+/* ========== HOME SECTION ========== */
 .home-section {
     max-width: 90vw;
     margin: 60px;
@@ -98,7 +100,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* SECTION HEADERS */
+/* ========== SECTION HEADERS & PARAGRAPHS ========== */
 .spacex-whatis h2,
 .spacex-history h2 {
     font-size: 2rem;
@@ -110,7 +112,6 @@ body {
     text-align: center;
 }
 
-/* Paragraphs */
 .spacex-whatis p,
 .spacex-history p {
     font-size: 1.1rem;
@@ -120,7 +121,7 @@ body {
     text-align: center;
 }
 
-/* Achievements list */
+/* ========== ACHIEVEMENTS LIST ========== */
 .spacex-history h3 {
     font-size: 2rem;
     font-weight: 700;
@@ -144,7 +145,7 @@ body {
     list-style-type: disc;
 }
 
-/* Arrow */
+/* ========== ARROW ICON ========== */
 .icon.arrow {
     display: flex;
     align-items: center;
@@ -173,7 +174,7 @@ body {
     border-color: #00cfff;
 }
 
-/* Launches Section */
+/* ========== LAUNCHES SECTION ========== */
 .launches-section {
     max-width: 90vw;
     margin: 60px auto 0 auto;
@@ -274,7 +275,7 @@ body {
     line-height: 1.6;
 }
 
-/* Fleet Section */
+/* ========== FLEET SECTION ========== */
 .fleet-section {
     max-width: 90vw;
     margin: 60px auto 0 auto;
@@ -371,7 +372,7 @@ body {
     text-align: left;
 }
 
-/* Footer Section */
+/* ========== FOOTER ========== */
 .footer {
     width: 100%;
     background: #111;
