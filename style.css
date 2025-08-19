@@ -273,3 +273,144 @@ body {
     margin-bottom: 16px;
     line-height: 1.6;
 }
+
+/* Fleet Section */
+.fleet-section {
+    max-width: 90vw;
+    margin: 60px auto 0 auto;
+    padding: 40px 30px;
+    background: rgba(20, 20, 30, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 170, 255, 0.12);
+}
+
+.fleet-section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #00aaff;
+    text-align: center;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #000;
+}
+
+.fleet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    justify-content: center;
+}
+
+.fleet-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(10, 20, 40, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,170,255,0.10);
+    padding: 28px 22px;
+    transition: box-shadow 0.2s;
+    border-left: 4px solid #00aaff;
+    max-width: 90vw;
+    margin: 0 auto;
+    gap: 32px;
+}
+
+.fleet-item:hover {
+    box-shadow: 0 8px 32px rgba(0,170,255,0.22);
+    border-left: 4px solid #00cfff;
+}
+
+.fleet-item img {
+    width: 240px;
+    max-width: 40vw;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #00aaff44;
+    margin-bottom: 0;
+    background: #222;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.fleet-item-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fleet-item-content h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.fleet-details {
+    margin: 0 0 12px 0;
+}
+
+.fleet-details dt {
+    font-size: 1.05rem;
+    color: #00aaff;
+    font-weight: 700;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.fleet-details dd {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-left: 0;
+    margin-bottom: 8px;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-top: 2px solid #00aaff;
+    box-shadow: 0 -4px 24px rgba(0,170,255,0.10);
+}
+
+.footer a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer .footer-links {
+    margin: 12px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer .footer-links a {
+    font-size: 1rem;
+}
+
+.footer .footer-copy {
+    margin-top: 18px;
+    color: #b0e0ff;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
