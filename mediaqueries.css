@@ -1,0 +1,14 @@
+/* Responsive for mobile */
+@media (max-width: 600px) {
+    .home-section {
+        padding: 18px 8px;
+        max-width: 98vw;
+    }
+    .spacex-welcome h1 {
+        font-size: 2rem;
+    }
+    .spacex-whatis h2,
+    .spacex-history h2 {
+        font-size: 1.3rem;
+    }
+}

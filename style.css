@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #000;
+    background: #0b0c10;
     color: #fff;
 }
 
@@ -47,4 +47,128 @@ body {
 
 .navbar-links li a:hover {
     color: #00aaff;
+}
+
+/* HOME SECTION */
+.home-section {
+    max-width: 90vw;
+    margin: 60px;
+    padding: 40px 30px;
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.spacex-welcome h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 2px 8px #000;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, #fff 0%, #00aaff 40%, #fff 60%, #00aaff 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer-text 3.5s ease-in-out infinite;
+}
+
+@keyframes shimmer-text {
+    0% {
+        background-position: -100% 0;
+    }
+    60% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.spacex-welcome p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #c0c0c0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* SECTION HEADERS */
+.spacex-whatis h2,
+.spacex-history h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: #00aaff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Paragraphs */
+.spacex-whatis p,
+.spacex-history p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Achievements list */
+.spacex-history h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: #00aaff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.spacex-history ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.spacex-history li {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #b0e0ff;
+    line-height: 1.5;
+    list-style-type: disc;
+}
+
+/* Arrow */
+.icon.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #00aaff 60%, #005577 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,170,255,0.25);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s, background 0.2s;
+    border: 2px solid #00aaff;
+}
+
+.icon.arrow img {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 0 2px #fff);
+}
+
+.icon.arrow:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 24px rgba(0,170,255,0.35);
+    background: linear-gradient(135deg, #00cfff 60%, #0077aa 100%);
+    border-color: #00cfff;
 }
