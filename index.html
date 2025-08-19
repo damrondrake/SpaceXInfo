@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet"">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -13,10 +14,32 @@
             <span class="spacex-logo">SpaceX-Info</span>
         </div>
         <ul class="navbar-links">
-            <li><a href="#about">About</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#launches">Launches</a></li>
             <li><a href="#fleet">Fleet</a></li>
         </ul>
     </nav>
+    <section id="home" class="home-section">
+        <div class="spacex-welcome">
+            <h1>Welcome to SpaceX-Info <br><p>Your source for SpaceX information and updates</p></h1>
+        </div>
+        <div class="spacex-whatis">
+            <h2>What is SpaceX?</h2>
+        <p>SpaceX, founded in 2002 by entrepreneur Elon Musk, is a company driven by a bold vision: to make humanity a multiplanetary species. Their mission is to revolutionize space travel by developing reusable rockets and spacecraft, drastically reducing the cost of accessing space. They’re not just about getting to orbit—they’re working to build a future where humans can live on Mars and beyond.</p>
+        </div>
+        <div class="spacex-history">
+            <h2>A Brief History</h2>
+        <p>SpaceX started in a small warehouse in El Segundo, California, with a team determined to shake up an industry dominated by big players. In 2008, after several challenging years and near bankruptcy, SpaceX made history with the Falcon 1, the first privately-funded liquid-fueled rocket to reach orbit. From there, they scaled up fast, developing the Falcon 9, Falcon Heavy, and the Dragon spacecraft. Today, SpaceX is a leader in commercial spaceflight, working closely with NASA and launching satellites, cargo, and astronauts to space.</p>
+        <h3>Notable Achievements</h3>
+        <ul>
+            <li>Reusable Rockets: SpaceX pioneered reusable rocket technology with the Falcon 9, which can land back on Earth after launch. This game-changer has slashed launch costs and made space more accessible.</li>
+            <li>Crewed Missions: In 2020, SpaceX’s Crew Dragon carried astronauts to the International Space Station, marking the first time a private company launched humans into orbit.</li>
+            <li>Starlink: SpaceX is building a massive constellation of satellites to provide high-speed internet worldwide, with thousands already in orbit.</li>
+            <li>Starship: Their ambitious Starship program aims to create a fully reusable spacecraft capable of carrying crew and cargo to the Moon, Mars, and beyond. It’s the cornerstone of their multiplanetary dream.</li>
+            <li>Record-Breaking Launches: In 2024 alone, SpaceX completed over 100 successful launches, a testament to their reliability and innovation.</li>
+        </ul>
+        </div>
+        <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#launches'">
+    </section>
 </body>
 </html>
