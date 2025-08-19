@@ -315,6 +315,9 @@ body {
     max-width: 90vw;
     margin: 0 auto;
     gap: 32px;
+    min-width: 0;
+    width: 100%;
+    flex: 1;
 }
 
 .fleet-item:hover {
@@ -324,7 +327,9 @@ body {
 
 .fleet-item img {
     width: 240px;
+    height: 240px;
     max-width: 40vw;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 2px 12px #00aaff44;
     margin-bottom: 0;
@@ -334,10 +339,12 @@ body {
 }
 
 .fleet-item-content {
-    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    min-width: 0;
+    width: 100%;
+    flex: 1;
 }
 
 .fleet-item-content h3 {
