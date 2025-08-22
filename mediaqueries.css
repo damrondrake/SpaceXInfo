@@ -39,19 +39,36 @@
         max-width: 98vw;
     }
     .launch-item {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 18px;
-    }
-    .launch-item img {
-        width: 98vw;
+        width: 100%;
         max-width: 98vw;
-        margin-left: 0;
-        margin-bottom: 18px;
+        padding: 18px 6px;
     }
     .launch-item-content {
         align-items: center;
         width: 100%;
+        justify-content: center;
+    }
+    .launch-links {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    .launch-item img {
+        width: 88vw;
+        max-width: 88vw;
+        margin: 0 auto 18px auto;
+        display: block;
+    }
+    .launch-details {
+        max-width: 98vw;
+        width: 100%;
+        text-align: center;
+        padding: 10px 2px;
     }
 }
 
@@ -161,10 +178,39 @@
     }
 }
 
-    /* ========== LARGE SCREENS (1440px+) ========== */
-    @media (min-width: 1440px) {
-        /* Keep fleet-section width consistent with other sections */
-        .fleet-section {
-            max-width: 90vw;
-        }
+/* ========== LARGE SCREENS (1440px+) ========== */
+@media (min-width: 1440px) {
+    /* Keep fleet-section width consistent with other sections */
+    .fleet-section {
+        max-width: 90vw;
     }
+}
+
+/* ========== ULTRA-WIDE MONITORS (2560px+) ========== */
+@media (min-width: 2560px) {
+    .home-section,
+    .launches-section,
+    .fleet-section {
+        max-width: 1800px;
+        margin: 60px auto 0 auto;
+        padding: 60px 60px;
+    }
+    .launch-item,
+    .fleet-item {
+        max-width: 1600px;
+        padding: 40px 40px;
+        gap: 48px;
+    }
+    .launch-item img,
+    .fleet-item img {
+        max-width: 320px;
+        width: 320px;
+    }
+    .footer {
+        font-size: 1.2rem;
+        padding: 48px 0 24px 0;
+    }
+    .footer .footer-links {
+        gap: 32px;
+    }
+}
