@@ -49,7 +49,7 @@ SpaceX Info is a modern, recruiter-friendly full-stack web application that prov
 - Separation of concerns (frontend/backend/database)
 
 ## How to Run/Use
-- Visit the [GitHub Pages site](YOUR_GITHUB_PAGES_URL) for the frontend.
+- Visit the [GitHub Pages site](https://damrondrake.github.io/SpaceXInfo/) for the frontend.
 - Backend is live at [Render](https://spacexinfo.onrender.com) (API only).
 - Register or log in to demo authentication and cloud database features.
 
@@ -73,5 +73,3 @@ This project demonstrates:
 - MongoDB Atlas for cloud database
 - Render.com for backend hosting
 
----
-**Impress recruiters with a real, cloud-powered full-stack app!**
