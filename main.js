@@ -1,4 +1,3 @@
-// Fetch next launch info from backend and update UI
 async function fetchNextLaunch() {
     try {
         const res = await fetch('http://localhost:5000/api/next-launch');
@@ -38,7 +37,6 @@ async function fetchRecentLaunches() {
         const launch = await res.json();
         const launchesList = document.getElementById('launches-list');
         launchesList.innerHTML = '';
-        // Get rocket name (need another API call)
         let rocketName = 'N/A';
         if (launch.rocket) {
             try {
@@ -47,7 +45,6 @@ async function fetchRecentLaunches() {
                 rocketName = rocketData.name || 'N/A';
             } catch {}
         }
-        // Get launchpad name (need another API call)
         let padName = 'N/A';
         if (launch.launchpad) {
             try {
@@ -96,3 +93,97 @@ async function fetchRecentLaunches() {
     }
 }
 fetchRecentLaunches();
+
+// AUTH MODAL LOGIC
+function openAuthModal() {
+  document.getElementById('auth-modal').style.display = 'flex';
+}
+function closeAuthModal() {
+  document.getElementById('auth-modal').style.display = 'none';
+}
+function showSignIn() {
+  document.getElementById('signin-form').style.display = '';
+  document.getElementById('signup-form').style.display = 'none';
+  document.getElementById('show-signin').classList.add('active');
+  document.getElementById('show-signup').classList.remove('active');
+}
+function showSignUp() {
+  document.getElementById('signin-form').style.display = 'none';
+  document.getElementById('signup-form').style.display = '';
+  document.getElementById('show-signup').classList.add('active');
+  document.getElementById('show-signin').classList.remove('active');
+}
+// Default to sign in
+showSignIn();
+
+document.getElementById('signin-form').onsubmit = async function(e) {
+  e.preventDefault();
+  const username = document.getElementById('signin-username').value;
+  const password = document.getElementById('signin-password').value;
+  const msg = document.getElementById('signin-message');
+  msg.textContent = '';
+  try {
+    const res = await fetch('http://localhost:5000/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+    const data = await res.json();
+    if (res.ok) {
+      msg.textContent = 'Login successful!';
+      // Save username and token
+      localStorage.setItem('username', username);
+      localStorage.setItem('token', data.token);
+      updateAuthNavbar();
+      closeAuthModal();
+    } else {
+      msg.textContent = data.error || 'Login failed.';
+    }
+  } catch {
+    msg.textContent = 'Login failed.';
+  }
+};
+
+document.getElementById('signup-form').onsubmit = async function(e) {
+  e.preventDefault();
+  const username = document.getElementById('signup-username').value;
+  const email = document.getElementById('signup-email').value;
+  const password = document.getElementById('signup-password').value;
+  const msg = document.getElementById('signup-message');
+  msg.textContent = '';
+  try {
+    const res = await fetch('http://localhost:5000/api/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, email, password })
+    });
+    const data = await res.json();
+    if (res.ok) {
+      msg.textContent = 'Sign up successful! You can now sign in.';
+      showSignIn();
+    } else {
+      msg.textContent = data.error || 'Sign up failed.';
+    }
+  } catch {
+    msg.textContent = 'Sign up failed.';
+  }
+};
+
+function updateAuthNavbar() {
+  const username = localStorage.getItem('username');
+  const container = document.getElementById('auth-navbar-container');
+  if (username) {
+    container.innerHTML = `<span class='auth-welcome'>Welcome, ${username}</span> <button class='auth-navbar-btn' onclick='signOut()'>Sign Out</button>`;
+  } else {
+    container.innerHTML = `<button class='auth-navbar-btn' onclick='openAuthModal()'>Sign In / Sign Up</button>`;
+  }
+}
+
+function signOut() {
+  localStorage.removeItem('username');
+  localStorage.removeItem('token');
+  updateAuthNavbar();
+}
+
+// On page load, update navbar
+updateAuthNavbar();
