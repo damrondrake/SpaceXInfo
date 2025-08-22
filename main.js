@@ -1,6 +1,6 @@
 async function fetchNextLaunch() {
     try {
-        const res = await fetch('http://localhost:5000/api/next-launch');
+        const res = await fetch('https://spacexinfo.onrender.com/api/next-launch');
         const data = await res.json();
         document.getElementById('launch-name').textContent = data.name || 'N/A';
         // Format date
@@ -123,7 +123,7 @@ document.getElementById('signin-form').onsubmit = async function(e) {
   const msg = document.getElementById('signin-message');
   msg.textContent = '';
   try {
-    const res = await fetch('http://localhost:5000/api/login', {
+    const res = await fetch('https://spacexinfo.onrender.com/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password })
@@ -152,7 +152,7 @@ document.getElementById('signup-form').onsubmit = async function(e) {
   const msg = document.getElementById('signup-message');
   msg.textContent = '';
   try {
-    const res = await fetch('http://localhost:5000/api/register', {
+    const res = await fetch('https://spacexinfo.onrender.com/api/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, email, password })
